@@ -1,55 +1,71 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-a{
+
+a {
 	text-decoration: none;
 	cursor: pointer;
 }
-a:hover{
+
+a:hover {
 	text-decoration: none;
 }
-body{
+
+body {
 	padding-bottom: 40px;
 	width: 100%;
-	overflow-x: auto;
 }
-.page{
+
+.page {
 	width: 100%;
 }
-.pc-view{
+
+.pc-view {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
+	overflow-x: auto;
 }
-.m-view{
+
+.m-view {
 	display: none;
 	width: 100%;
 	max-width: 768px;
 	margin: 0 auto;
 }
-.page{
+
+.page {
 	position: relative;
 	width: 100%;
 }
-.page img{
+
+.page img {
 	display: block;
 	width: 100%;
 	height: auto;
 }
-.pc-view .buy-btn{
-	position: absolute;
+
+.pc-view .buy-btn {
+	position: fixed;
 	top: 97px;
 	right: 0;
+	left: 50%;
+	transform: translateX(476px);
+	width: 124px;
+	z-index: 10;
 }
-.m-view .buy-btn{
-	position: absolute;
-    top: 7%;
-    right: 0;
-    width: 16%;
+
+.m-view .buy-btn {
+	position: fixed;
+	top: 7%;
+	right: 0;
+	width: 16%;
+	z-index: 10;
 }
-.btn-wrap{
+
+.btn-wrap {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -57,61 +73,72 @@ body{
 	display: flex;
 	justify-content: center;
 }
-.pc-view .btn-wrap a{
+
+.pc-view .btn-wrap a {
 	padding: 0 60px 100px;
 }
-.pc-view .btn-wrap img{
+
+.pc-view .btn-wrap img {
 	width: 139px;
 }
-.m-view .btn-wrap a{
+
+.m-view .btn-wrap a {
 	width: 50%;
 	padding-bottom: 50px;
 }
-.m-view .btn-wrap .weibo-btn{
+
+.m-view .btn-wrap .weibo-btn {
 	padding-left: 28%;
 	padding-right: 5%;
 }
-.m-view .btn-wrap .weixin-btn{
+
+.m-view .btn-wrap .weixin-btn {
 	padding-right: 28%;
 	padding-left: 5%;
 }
-.pc-view .shop-btn{
+
+.pc-view .shop-btn {
 	position: absolute;
-    display: block;
-    width: 170px;
-    height: 70px;
-    bottom: 50%;
-    transform: translateY(160px);
-    display: none;
+	display: block;
+	width: 170px;
+	height: 70px;
+	bottom: 50%;
+	transform: translateY(160px);
+	display: none;
 }
-.pc-view .jd-btn{
+
+.pc-view .jd-btn {
 	right: 50%;
 }
-.pc-view .taobao-btn{
+
+.pc-view .taobao-btn {
 	left: 50%;
 	margin-left: 40px;
 }
-.m-view .shop-btn{
+
+.m-view .shop-btn {
 	position: absolute;
-    display: block;
-    width: 20%;
-    height: 40px;
-    bottom: 22%;
-    display: none;
-    
+	display: block;
+	width: 20%;
+	height: 40px;
+	bottom: 22%;
+	display: none;
 }
-.m-view .jd-btn{
+
+.m-view .jd-btn {
 	right: 50%;
 }
-.m-view .taobao-btn{
+
+.m-view .taobao-btn {
 	left: 50%;
 	margin-left: 16px;
 }
+
 @media screen and (max-width: 768px) {
-    .pc-view{
+	.pc-view {
 		display: none;
 	}
-	.m-view{
+	.m-view {
 		display: block;
 	}
 }
