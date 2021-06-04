@@ -14,7 +14,6 @@ a:hover {
 }
 
 body {
-	padding-bottom: 40px;
 	width: 100%;
 }
 
@@ -24,7 +23,7 @@ body {
 
 .pc-view {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 	overflow-x: auto;
 }
@@ -52,7 +51,7 @@ body {
 	top: 97px;
 	right: 0;
 	left: 50%;
-	transform: translateX(476px);
+	transform: translateX(376px);
 	width: 124px;
 	z-index: 10;
 }
@@ -74,17 +73,33 @@ body {
 	justify-content: center;
 }
 
-.pc-view .btn-wrap a {
+.pc-view .btn-wrap a,
+.pc-view .btn-wrap span {
 	padding: 0 60px 100px;
+	cursor: pointer;
+	position: relative;
+}
+
+.pc-view .btn-wrap .hover-img {
+	position: absolute;
+	top: -80px;
+	right: 60px;
+	display: none;
+}
+
+.pc-view .weixin-btn:hover .hover-img{
+	display: block;
 }
 
 .pc-view .btn-wrap img {
 	width: 139px;
 }
 
-.m-view .btn-wrap a {
+.m-view .btn-wrap a,
+.m-view .btn-wrap span {
 	width: 50%;
 	padding-bottom: 50px;
+	cursor: pointer;
 }
 
 .m-view .btn-wrap .weibo-btn {
@@ -132,6 +147,21 @@ body {
 .m-view .taobao-btn {
 	left: 50%;
 	margin-left: 16px;
+}
+.m-layer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0, 0.5);
+	z-index: 11;
+}
+.m-hover-img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 768px) {

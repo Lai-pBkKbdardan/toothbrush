@@ -24,12 +24,13 @@
 			<div class="page">
 				<img src="./images/page6.jpg"/>
 				<div class="btn-wrap">
-					<a class="weibo-btn" href="javascript:;" title="官方微博">
+					<a class="weibo-btn" href="https://weibo.com/p/1006066434903260/home?from=page_100606&mod=TAB#place" title="点击访问官方微博" target="_blank">
 						<img src="images/weibo.png" alt="qianshan-weibo"/>
 					</a>
-					<a class="weixin-btn" href="javascript:;" title="官方微信">
-						<img src="images/weixin.png" alt="qianshan-weixin"/>
-					</a>
+					<span class="weixin-btn" title="扫码关注-官方微信">
+						<img src="images/weixin.png" alt="qianshan-weixin" />
+						<img src="images/wechat.jpg" alt="官方微信" class="hover-img">
+					</span>
 				</div>
 			</div>
 			<div class="page">
@@ -55,12 +56,12 @@
 			<div class="page">
 				<img src="./images/m-page7.jpg"/>
 				<div class="btn-wrap">
-					<a class="weibo-btn" href="javascript:;" title="官方微博">
+					<a class="weibo-btn" href="https://weibo.com/p/1006066434903260/home?from=page_100606&mod=TAB#place" target="_blank" title="点击访问官方微博">
 						<img src="images/weibo.png" alt="qianshan-weibo"/>
 					</a>
-					<a class="weixin-btn" href="javascript:;" title="官方微信">
+					<span class="weixin-btn" id="wechat-btn" title="扫码关注-官方微信">
 						<img src="images/weixin.png" alt="qianshan-weixin"/>
-					</a>
+					</span>
 				</div>
 			</div>
 			<div class="page">
@@ -68,7 +69,23 @@
 				<a href="https://www.jd.com" target="_blank" class="jd-btn shop-btn"></a>
 				<a href="https://www.taobao.com" target="_blank" class="taobao-btn shop-btn"></a>
 			</div>
+			<div class="m-layer" id="m-layer" style="display: none;">
+				<img src="images/wechat.jpg" alt="官方微信" class="m-hover-img">
+			</div>
 		</div>
-		
+		<script type="text/javascript">
+			window.onload = function() {
+				var btn = document.getElementById('wechat-btn');
+				var layer = document.getElementById('m-layer');
+				
+				btn.addEventListener('click', function() {
+					layer.style.display = 'block';
+				}, false)
+				
+				layer.addEventListener('click', function() {
+					layer.style.display = 'none';
+				}, false)
+			}
+		</script>
 	</body>
 </html>
