@@ -159,6 +159,7 @@ body {
 }
 .m-hover-img{
 	position: absolute;
+	z-index: 13;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
