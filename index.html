@@ -70,6 +70,7 @@
 				<a href="https://www.taobao.com" target="_blank" class="taobao-btn shop-btn"></a>
 			</div>
 			<div class="m-layer" id="m-layer" style="display: none;">
+				<div class="close-layer" id="close-layer"></div>
 				<img src="images/wechat.jpg" alt="官方微信" class="m-hover-img">
 			</div>
 		</div>
@@ -77,14 +78,15 @@
 			window.onload = function() {
 				var btn = document.getElementById('wechat-btn');
 				var layer = document.getElementById('m-layer');
+				var closeBtn = document.getElementById('close-layer');
 				
 				btn.addEventListener('click', function() {
 					layer.style.display = 'block';
-				}, false)
+				}, true)
 				
-				layer.addEventListener('click', function() {
+				closeBtn.addEventListener('click', function() {
 					layer.style.display = 'none';
-				}, false)
+				}, true)
 			}
 		</script>
 	</body>
