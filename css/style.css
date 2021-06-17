@@ -115,6 +115,10 @@ body {
 	padding-right: 28%;
 	padding-left: 5%;
 }
+.m-view .btn-wrap img{
+	max-width: 80px;
+}
+
 
 .pc-view .shop-btn {
 	position: absolute;
